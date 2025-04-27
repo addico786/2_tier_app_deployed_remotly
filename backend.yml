@@ -1,0 +1,35 @@
+- name: install dependencies for node js
+  hosts: server_2
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install dependencies
+      apt:
+        name:
+          - nodejs
+          - npm
+        state: latest
+
+    - name: Copy server.js
+      copy:
+        src: server.js
+        dest: /home/ubuntu/app
+
+    - name: Copy form-handler.js
+      copy:
+        src: form-handler.js
+        dest: /home/ubuntu/app
+
+    - name: Copy package.json
+      copy:
+        src: package.json
+        dest: /home/ubuntu/app
+
+    - name: Copy package-lock.json 
+      copy:
+        src: package-lock.json
+        dest: /home/ubuntu/app
+      ignore_errors: yes
