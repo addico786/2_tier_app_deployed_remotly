@@ -1,0 +1,18 @@
+-
+  name: install and run nginx for frontedn file
+  hosts: server_1
+  become: yes
+  tasks:
+    - name: install nginx
+      apt:
+        name: nginx
+        state: latest
+    - name: running the service
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+    - name: copy the frontend files
+      copy:
+        src: index.html
+        dest: /var/www/html
