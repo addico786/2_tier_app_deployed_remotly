@@ -1,35 +1,28 @@
-- name: install dependencies for node js
+- name: installing apache and running the backend
   hosts: server_2
   become: yes
   tasks:
-    - name: Update apt cache
-      apt:
-        update_cache: yes
-
-    - name: Install dependencies
+    - name: installing apache
       apt:
         name:
-          - nodejs
-          - npm
+          - apache2
+          - php
+          - libapache2-mod-php
         state: latest
+        update_cache: yes
 
-    - name: Copy server.js
+    - name: running the service
+      service:
+        name: apache2
+        state: started
+        enabled: yes
+
+    - name: copying the PHP backend file
       copy:
-        src: server.js
-        dest: /home/ubuntu/app
+        src: index.php
+        dest: /var/www/html/
 
-    - name: Copy form-handler.js
+    - name: copying the JS file
       copy:
         src: form-handler.js
-        dest: /home/ubuntu/app
-
-    - name: Copy package.json
-      copy:
-        src: package.json
-        dest: /home/ubuntu/app
-
-    - name: Copy package-lock.json 
-      copy:
-        src: package-lock.json
-        dest: /home/ubuntu/app
-      ignore_errors: yes
+        dest: /var/www/html/
