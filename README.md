@@ -72,6 +72,7 @@ Here’s a quick breakdown of the tools involved in this setup:
 - **MySQL** – For storing backend data on the database tier.
 - **Apache2 + PHP** – Used for running the backend service.
 - **Nginx** – To serve the frontend web page.
+- **git** - for versioning my files and to keep track of them.
 
 ---
 ## 📌 Future Enhancements
