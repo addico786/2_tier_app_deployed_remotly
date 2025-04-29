@@ -80,3 +80,6 @@ Here’s a quick breakdown of the tools involved in this setup:
 2.Add SSL/TLS to frontend nginx.
 3.CI/CD pipeline with GitHub Actions and Ansible.
 4.Add load balancing with HAProxy.
+---
+## Author
+Made by Adnan Khan
