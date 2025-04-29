@@ -1,7 +1,7 @@
 # 🚀 2-Tier Application Deployment Using Ansible (Remote Setup)
 
 Hey everyone! 👋  
-In this ride-along session, I'm showing you how I deployed a complete **2-tier application** — that’s **frontend, backend, and database** — across **three different remote servers** using **only Ansible**. No manual SSH, no copy-paste. Everything is automated and managed cleanly through Ansible playbooks.
+In this project, I'm showing you how I deployed a complete **2-tier application** — that’s **frontend, backend, and database** — across **three different remote servers** using **only Ansible**. No manual SSH, no copy-paste. Everything is automated and managed cleanly through Ansible playbooks.
 
 This project automates the deployment of a simple 2-tier application architecture:
 - **Frontend** → Nginx Web Server (Static Website)
