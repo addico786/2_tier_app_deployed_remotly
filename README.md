@@ -1,6 +1,6 @@
-# 🚀 2-Tier Application Deployment Using Ansible (Remote Setup)
+#  2-Tier Application Deployment Using Ansible (Remote Setup)
 
-Hey everyone! 👋  
+Hey everyone!  
 In this project, I'm showing you how I deployed a complete **2-tier application** — that’s **frontend, backend, and database** — across **three different remote servers** using **only Ansible**. No manual SSH, no copy-paste. Everything is automated and managed cleanly through Ansible playbooks.
 
 This project automates the deployment of a simple 2-tier application architecture:
@@ -15,7 +15,7 @@ All setup remotely using **Ansible** playbooks.
 
 ---
 
-## 🚀 What This Project Does
+##  What This Project Does
 
 - Sets up Nginx server on frontend.
 - Deploys Apache server and PHP backend on backend.
@@ -26,7 +26,7 @@ All setup remotely using **Ansible** playbooks.
 
 ---
 
-## 🔧 Requirements
+##  Requirements
 
 - Ubuntu-based EC2 instances (or VMs)
 - Ansible installed on control node
@@ -36,7 +36,7 @@ All setup remotely using **Ansible** playbooks.
 
 ---
 
-## 🛠️ How to Run
+##  How to Run
 
 1. Update your inventory file (`/etc/ansible/hosts`) with correct server IPs.
 2. Run the individual playbooks:
@@ -53,14 +53,14 @@ or you can make a shell script to deploy all the files
 the above script is present in the repo
 ---
 
-## 🌐 Application Flow
+##  Application Flow
 1.User visits the frontend (Nginx) via IP.
 2.Frontend forwards data to backend (Apache/PHP).
 3.Backend talks to the database (MySQL).
 4.Database stores or retrieves data as needed.
 ---
 
-## 🧰 Tools I Used
+##  Tools I Used
 
 Here’s a quick breakdown of the tools involved in this setup:
 
@@ -75,7 +75,7 @@ Here’s a quick breakdown of the tools involved in this setup:
 - **git** - for versioning my files and to keep track of them.
 
 ---
-## 📌 Future Enhancements
+##  Future Enhancements
 
 1.Deploy full application using Docker Compose.
 2.Add SSL/TLS to frontend nginx.
